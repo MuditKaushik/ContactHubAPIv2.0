@@ -1,4 +1,4 @@
-import { ApiRouter } from './apiRoutes'
+import { ApiRouter } from './api.config'
 import * as bodyParser from 'body-parser'
 import * as express from 'express'
 import * as fs from 'fs'
@@ -7,7 +7,7 @@ import * as path from 'path'
 export module ServerConfig {
     let server = express(),
         router = express.Router(),
-        config = JSON.parse(fs.readFileSync(path.join(__dirname, '../../config/server.config.json'), 'utf8'));
+        config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/server.config.json'), 'utf8'));
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: true }));
 
@@ -22,7 +22,8 @@ export module ServerConfig {
             return this._instance;
         }
         setup(): void {
-            let apiRoutes = new ApiRouter.ApiConfig(server, './api').configRoutes();
+            let apiPath = path.join(__dirname, "").split(path.sep).pop().concat("/api");
+            let apiRoutes = new ApiRouter.ApiConfig().configRoutes(server, apiPath);
         }
         start(): void {
         }
