@@ -19,7 +19,7 @@ export module ApiRouter {
                         if (file.toLowerCase().indexOf('.js') && file.toLowerCase().indexOf(".map") == -1) {
                             let dir = path.dirname(fullPath).split(path.sep);
                             if ((dir[0] + "/" + dir[1]).toLowerCase() === this.startFolder) {
-                                dir.splice(0, 1);
+                                dir.splice(0, 2);
                             }
                             const route = express.Router();
                             let baseRoute = "/" + dir.join("/");

@@ -1,0 +1,14 @@
+{
+    "contacts":[
+        {
+            "_id":1,
+            "firstName":"Mudit",
+            "middleName":"Mohan",
+            "lastName":"Kaushik",
+            "email":"mudit@gmail.com",
+            "gender":"male",
+            "username":"muditM",
+            "password":"mudit"
+        }
+    ]
+}
