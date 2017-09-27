@@ -9,7 +9,7 @@ export module DataService {
             this.filePath = path.join(__dirname, '../../config/mockdata.json');
             this.mockData = JSON.parse(fs.readFileSync(this.filePath, "utf8"));
         }
-        getContacts(): any {
+        getMockData(): any {
             return this.mockData;
         }
     }

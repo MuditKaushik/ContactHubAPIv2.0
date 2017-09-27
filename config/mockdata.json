@@ -1,14 +1,98 @@
 {
-    "contacts":[
+    "contacts": [
         {
-            "_id":1,
-            "firstName":"Mudit",
-            "middleName":"Mohan",
-            "lastName":"Kaushik",
-            "email":"mudit@gmail.com",
-            "gender":"male",
-            "username":"muditM",
-            "password":"mudit"
+            "_id": 1,
+            "firstName": "Mudit",
+            "middleName": "Mohan",
+            "lastName": "Kaushik",
+            "email": "mudit@gmail.com",
+            "gender": "male",
+            "username": "muditM",
+            "password": "mudit"
+        },
+        {
+            "_id": 2,
+            "firstName": "Mudit2",
+            "middleName": "Mohan",
+            "lastName": "Kaushik",
+            "email": "mudit@gmail.com",
+            "gender": "male",
+            "username": "muditM",
+            "password": "mudit"
+        },
+        {
+            "_id": 3,
+            "firstName": "Mudit3",
+            "middleName": "Mohan",
+            "lastName": "Kaushik",
+            "email": "mudit@gmail.com",
+            "gender": "male",
+            "username": "muditM",
+            "password": "mudit"
+        },
+        {
+            "_id": 4,
+            "firstName": "Mudit4",
+            "middleName": "Mohan",
+            "lastName": "Kaushik",
+            "email": "mudit@gmail.com",
+            "gender": "male",
+            "username": "muditM",
+            "password": "mudit"
+        },
+        {
+            "_id": 5,
+            "firstName": "Mudit5",
+            "middleName": "Mohan",
+            "lastName": "Kaushik",
+            "email": "mudit@gmail.com",
+            "gender": "male",
+            "username": "muditM",
+            "password": "mudit"
+        }
+    ],
+    "files": [
+        {
+            "_id": 1,
+            "name": "ABC",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
+        },
+        {
+            "_id": 2,
+            "name": "ABC2",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
+        },
+        {
+            "_id": 3,
+            "name": "ABC3",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
+        },
+        {
+            "_id": 4,
+            "name": "ABC4",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
+        },
+        {
+            "_id": 5,
+            "name": "ABC5",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
+        },
+        {
+            "_id": 6,
+            "name": "ABC6",
+            "extenstion": "pdf",
+            "date": "12/9/2017",
+            "lastmodify": "14/9/2017"
         }
     ]
 }
