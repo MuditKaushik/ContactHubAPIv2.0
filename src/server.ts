@@ -16,6 +16,7 @@ export module ServerConfig {
     export class ServerSetup {
         static _instance: ServerSetup = null;
         constructor() {
+            this.enable_cors();
             this.api_setup();
             this.server_start();
         }
@@ -23,6 +24,13 @@ export module ServerConfig {
             if (this._instance == null || this._instance == undefined)
                 this._instance = new ServerSetup();
             return this._instance;
+        }
+        enable_cors(): void {
+            server.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+                res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+                next();
+            });
         }
         api_setup(): void {
             let apiPath = path.join(__dirname, "").split(path.sep).pop().concat("/controllers");

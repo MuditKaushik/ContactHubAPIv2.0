@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var mockdata_service_1=require("../../dataService/mockdata_service"),PutContact;!function(t){var e=function(){return function(t){this._dataservice=new mockdata_service_1.DataService.MockData}}();t.Controller=e}(PutContact=exports.PutContact||(exports.PutContact={}));
