@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var mockdata_service_1=require("../../dataService/mockdata_service"),RemoveContact;!function(e){var t=function(){return function(e){this._dataservice=new mockdata_service_1.DataService.MockData}}();e.Controller=t}(RemoveContact=exports.RemoveContact||(exports.RemoveContact={}));

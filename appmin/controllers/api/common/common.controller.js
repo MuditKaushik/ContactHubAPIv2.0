@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var get_common_controller_1=require("../../../api_access/common/get_common.controller"),Common;!function(o){var n=function(){return function(o){new get_common_controller_1.GetCommon.CommonController(o)}}();o.CommonController=n}(Common||(Common={})),module.exports=Common.CommonController;

@@ -33,7 +33,7 @@ export module ServerConfig {
             });
         }
         api_setup(): void {
-            let apiPath = path.join(__dirname, "").split(path.sep).pop().concat("/controllers");
+            let apiPath = path.join(__dirname, "").split(path.sep).pop().concat("/api_register");
             let apiRoutes = new ApiRouter.ApiConfig().configRoutes(server, apiPath);
         }
         server_start(): void {

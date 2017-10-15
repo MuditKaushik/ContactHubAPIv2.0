@@ -8,7 +8,7 @@ export module ApiRouter {
         constructor() {
             this.startFolder = null;
         }
-        configRoutes(app: express.Application, controller: string) {
+        configRoutes(app: express.Application, controller: string): void {
             if (!this.startFolder) this.startFolder = controller;
             fs.readdirSync(controller).forEach((file) => {
                 let fullPath = path.join(controller, file);
