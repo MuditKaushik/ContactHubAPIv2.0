@@ -6,6 +6,7 @@ export module GetCommon {
         _dataService = new DataService.MockData();
         constructor(route: Router) {
             route.get('/gender', this.get_gender.bind(this));
+            route.get('/countries', this.get_countries.bind(this));
         }
         get_gender(req: Request, res: Response) {
             return res.status(200).send(this._dataService.getMockData().gender);
