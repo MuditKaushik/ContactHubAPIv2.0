@@ -12,5 +12,10 @@ export module DataService {
         getMockData(): any {
             return this.mockData;
         }
+        getCountries(): any {
+            let filePath = path.join(__dirname, '../../config/country.json');
+            let countries = JSON.parse(fs.readFileSync(filePath, "utf8"));
+            return countries;
+        }
     }
 }

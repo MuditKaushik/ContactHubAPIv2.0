@@ -10,5 +10,8 @@ export module GetCommon {
         get_gender(req: Request, res: Response) {
             return res.status(200).send(this._dataService.getMockData().gender);
         }
+        get_countries(req: Request, res: Response) {
+            return res.status(200).send(this._dataService.getCountries().country);
+        }
     }
 }

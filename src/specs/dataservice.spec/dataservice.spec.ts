@@ -18,4 +18,12 @@ describe("dataservice", () => {
         });
     });
 
+    describe("getCountries", () => {
+        it("should return countries in json", () => {
+            let countryPath: string = path.join(__dirname, '../../../config/country.json');
+            let countries = JSON.parse(fs.readFileSync(filePath, "utf8"));
+            assert.deepEqual(dataService.getCountries().country, countries.country);
+        });
+    });
+
 });
