@@ -1,38 +1,26 @@
 import 'mocha'
 import chai = require('chai')
 import chaiHttp = require('chai-http')
-import { ServerConfig } from '../../server'
-import { stub, restore } from 'sinon'
-import * as assert from 'assert'
-import { Application, Router, Request, Response } from 'express'
-import { GetContact } from '../../api_controllers/contacts/get_contact.controller'
-import { DataService } from '../../dataService/mockdata_service'
 chai.should();
 chai.use(chaiHttp);
 
-//#region GetContact Controllers Specs
+//#region Contacts Controllers Specs
 describe("GetContact Controller", () => {
-    let route: Router;
-    let dataService: DataService.MockData;
     let server: string;
     beforeEach(() => {
-        route = Router();
-        dataService = new DataService.MockData();
         server = 'http://localhost:1810/api'
     });
     //#region All Get Requests Specs
     describe("getRequests:", () => {
-        let getContact: GetContact.Controller;
         let contactapi: string;
         beforeEach(() => {
-            getContact = new GetContact.Controller(route);
             contactapi = `${server}/contact`;
         });
         describe("/", () => {
             it("should return all contacs", (done) => {
                 chai.request(contactapi).get("/").end((err, res) => {
                     chai.expect(res).to.have.status(200);
-                    chai.expect(res.body).to.be.a("array");
+                    chai.expect(res.body).to.be.a.instanceOf(Array);
                     done();
                 });
             });
@@ -42,7 +30,7 @@ describe("GetContact Controller", () => {
             it("should return specific contact", (done) => {
                 chai.request(contactapi).get("/1").end((err, res) => {
                     chai.expect(res).to.have.status(200);
-                    chai.expect(res.body).to.be.a("object");
+                    chai.expect(res.body).to.be.a.instanceOf(Object);
                     done();
                 });
             });
@@ -66,7 +54,7 @@ describe("GetContact Controller", () => {
             it("should search contacts from email", (done) => {
                 chai.request(contactapi).get("/search_email/mudit@gmail.com").end((err, res) => {
                     chai.expect(res).to.have.status(200);
-                    chai.expect(res.body).to.be.a('array');
+                    chai.expect(res.body).to.be.a.instanceOf(Array);
                     done();
                 });
             });
@@ -83,7 +71,7 @@ describe("GetContact Controller", () => {
             it("should return contact by gender", (done) => {
                 chai.request(contactapi).get("/search_gender/female").end((err, res) => {
                     chai.expect(res).to.have.status(200);
-                    chai.expect(res.body).to.be.a("array");
+                    chai.expect(res.body).to.be.a.instanceOf(Array);
                     done();
                 });
             });
