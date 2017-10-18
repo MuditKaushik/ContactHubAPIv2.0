@@ -7,12 +7,16 @@ export module GetCommon {
         constructor(route: Router) {
             route.get('/gender', this.get_gender.bind(this));
             route.get('/countries', this.get_countries.bind(this));
+            route.get('/searchcriteria', this.get_searchCriteria.bind(this));
         }
         get_gender(req: Request, res: Response) {
             return res.status(200).send(this._dataService.getMockData().gender);
         }
         get_countries(req: Request, res: Response) {
             return res.status(200).send(this._dataService.getCountries().country);
+        }
+        get_searchCriteria(req: Request, res: Response) {
+            return res.status(200).send(this._dataService.getMockData().searchcriteria);
         }
     }
 }

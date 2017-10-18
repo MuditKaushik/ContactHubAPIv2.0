@@ -33,6 +33,15 @@ describe("Common Controllers", () => {
                 });
             });
         });
+        describe("/searchcriteria", () => {
+            it("should return search criteria", (done) => {
+                chai.request(commonApi).get("/searchcriteria").end((err, res) => {
+                    chai.expect(res).to.have.status(200);
+                    chai.expect(res.body).to.be.a.instanceOf(Array);
+                    done();
+                });
+            });
+        });
     });
     //#endregion
 });

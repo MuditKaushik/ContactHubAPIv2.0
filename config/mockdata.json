@@ -104,5 +104,19 @@
             "name": "Female",
             "value": "2"
         }
+    ],
+    "searchcriteria": [
+        {
+            "filter": "Name",
+            "value": 1
+        },
+        {
+            "filter": "Email",
+            "value": 2
+        },
+        {
+            "filter": "Gender",
+            "value": 3
+        }
     ]
 }
