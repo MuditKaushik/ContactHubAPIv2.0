@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./app/specs/**/*.spec.js",
-    "start": "tsc && concurrently \"node ./app/server.js\" \"tsc -w\"",
+    "start": "tsc && concurrently \"node ./app/server.js\" \"tsc -w\" \"npm run gulp:w\"",
     "gulp:w": "gulp"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "@types/gulp": "^4.0.4",
     "@types/gulp-uglify": "^3.0.1",
     "@types/gulp-util": "^3.0.31",
+    "@types/js-yaml": "^3.9.1",
     "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.30",
     "@types/run-sequence": "0.0.29",
@@ -46,6 +47,7 @@
     "run-sequence": "^2.2.0",
     "sinon": "^4.0.1",
     "sinon-express-mock": "^1.3.1",
+    "swagger-ui-dist": "^3.4.0",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   }

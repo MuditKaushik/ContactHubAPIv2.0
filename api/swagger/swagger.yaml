@@ -1,0 +1,90 @@
+swagger: "2.0"
+info:
+  title: ContactHub API
+  description: Express Apis for ContactHub application.
+  version: "1.0.0"
+host: localhost:1810
+basePath: /api
+schemes: [http]
+consumes:
+    - application/json
+produces:
+    - application/json
+
+paths:
+  /common/gender:
+    get:
+      summary: Returns List of types of genders.
+      operationId: get_user
+      tags:
+        - Common API
+      consumes:
+        - application/json
+      produces: 
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: integer
+        400:
+          description: Bad Request
+        404:
+          description: Not Found
+
+  /common/countries:
+    get:
+      summary: Returns list of countries with state and dialing codes.
+      operationId: get_countries
+      tags:
+        - Common API
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Ok
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              dial_code:
+                type: string
+              code:
+                type: string
+        404:
+          description: Not Found
+        400:
+          description: Bad Request
+          
+  /common/searchCriteria:
+    get:
+      summary: Return filter criteria fields for contact list.
+      operationId: get_searchCriteria
+      tags:
+        - Common API
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              filter:
+                type: string
+              value:
+                type: integer
+        404:
+          description: Not Found
+        400:
+          description: Bad Request

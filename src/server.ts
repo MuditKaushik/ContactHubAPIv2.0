@@ -12,6 +12,7 @@ export module ServerConfig {
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({ extended: true }));
     server.set("port", config.api.port);
+    server.use(express.static(path.join(__dirname, "../docs")));
 
     export class ServerSetup {
         static _instance: ServerSetup = null;
@@ -37,6 +38,10 @@ export module ServerConfig {
             let apiRoutes = new ApiRouter.ApiConfig().configRoutes(server, apiPath);
         }
         server_start(): void {
+            server.get("/docs", (req, res) => {
+                let swaggerPath = path.join(__dirname, "../docs/index.html");
+                res.sendFile(swaggerPath);
+            });
             server.listen(server.get("port"), () => {
                 console.log(`Server starts at port ${server.get("port")}.`);
             });

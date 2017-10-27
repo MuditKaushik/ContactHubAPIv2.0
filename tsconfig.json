@@ -48,6 +48,7 @@
       "gulp",
       "gulp-uglify",
       "gulp-util",
+      "js-yaml",
       "mocha",
       "node",
       "run-sequence",
